@@ -1,12 +1,10 @@
-from main import check_time
+from repeat import repeat_decorator
 
-
-@check_time
+@repeat_decorator(times=2)
 def pereborg():
-    nums = range(1, 10000000)
+    nums = range(1, 5)
     for i in nums:
         i = i ** 2
         print(i)
+print(pereborg.__name__)
 
-
-print(pereborg())
